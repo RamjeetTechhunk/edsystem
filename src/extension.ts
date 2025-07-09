@@ -55,7 +55,7 @@ async function triggerGPTAssistance() {
   const res = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
-      Authorization: `Bearer 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`,
+      Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
